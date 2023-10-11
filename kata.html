@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+
+function whosOnline(friends) {
+    let output = {};
+
+    for (let friend of friends) {
+        if (friend.status === 'online') {
+            if (friend.lastActivity > 10) {
+                output.away = output.away || [];
+                output.away.push(friend.username);
+            } else {
+                output.online = output.online || [];
+                output.online.push(friend.username);
+            }
+        } else {
+            output.offline = output.offline || [];
+            output.offline.push(friend.username);
+        }
+    }
+
+    return output;
+}
+
+// Sample usage
+const friends = [
+    {
+        username: 'David',
+        status: 'online',
+        lastActivity: 10
+    }, 
+    {
+        username: 'Lucy',
+        status: 'offline',
+        lastActivity: 22
+    }, 
+    {
+        username: 'Bob',
+        status: 'online',
+        lastActivity: 104
+    }
+];
+
+console.log(whosOnline(friends));
+</script>
+</body>
+</html>

@@ -1,0 +1,411 @@
+csss
+body, html {
+    margin: 0;
+    font: bold 14px/1.4 'Open Sans', Arial, sans-serif;
+    background: #000;
+}
+
+header {
+    background: #000;
+    margin: 0; /* Elimina el margen superior del encabezado */
+    padding: 0; /* Elimina el relleno del encabezado */
+}
+
+nav ul {
+    margin: 150px auto 0;
+    padding: 0;
+    list-style: none;
+    display: table;
+    width: 600px;
+    text-align: center;
+}
+
+nav li {
+    display: table-cell;
+    position: relative;
+    padding: 15px 0;
+}
+
+nav a {
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.15em;
+    display: inline-block;
+    padding: 15px 20px;
+    position: relative;
+}
+
+nav a:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+nav a:hover:after {
+    width: 100%;
+    left: 0;
+}
+
+/* Estilos para el contenido "About" */
+#about-content {
+    background-color: #000; /* Fondo negro */
+    color: #fff; /* Texto blanco */
+    padding: 20px;
+    margin-top: 20px;
+    display: none;
+    text-align: center;
+}
+
+#title {
+    text-align: center;
+    background-color: #000; /* Fondo negro */
+    color: #fff; /* Texto blanco */
+    font-size: 24px; /* Tamaño de fuente más grande */
+    padding: 20px;
+}
+
+#title img {
+    display: inline-block; /* Hacer que la imagen sea un elemento en línea */
+    vertical-align: middle; /* Alinear verticalmente con el texto */
+    margin-right: 20px; /* Margen derecho para separar la imagen del texto */
+    width: 300px; /* Tamaño de la imagen */
+    height: 200px;
+    transition: background-color 0.3s ease; /* Agrega una transición suave para el cambio de color */
+    filter: grayscale(100%); /* Mantén la imagen en blanco y negro */
+    transition: transform 0.3s ease;
+}
+
+#title img:hover {
+    transform: scale(1.5); /* Aumenta el tamaño de la imagen en un 10% al pasar el ratón */
+}
+
+
+nav ul {
+    list-style: none;
+    display: inline; /* Hacer que la lista de navegación sea un elemento en línea */
+    margin-top: 0; /* Elimina el margen superior de la lista de navegación */
+}
+
+nav li {
+    display: inline-block; /* Hacer que los elementos de la lista sean en línea y se puedan alinear horizontalmente */
+    margin-right: 20px; /* Espacio entre elementos de la lista */
+}
+
+nav a {
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.15em;
+}
+
+/* Estilos para el contenido "Biografía" y "Contacto" */
+
+#contact-content {
+    background-color: #000; /* Fondo negro */
+    color: #fff; /* Texto blanco */
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center; /* Alineación del texto a la izquierda */
+}
+
+
+#contact-content p {
+    margin-bottom: 10px; /* Espacio entre párrafos */
+}
+
+/* Estilos para los enlaces a LinkedIn y Twitter */
+#contact-content a {
+    font-family: 'TuTipoDeLetra', Arial, sans-serif; /* Establece el tipo de letra deseado */
+    font-size: x-large;
+    color: white; /* Color de enlace de LinkedIn */
+    text-decoration: none;
+}
+
+#contact-content a:hover {
+    color: white; /* Color de enlace de Twitter al pasar el cursor sobre él */
+}
+
+
+#title h1:hover {
+    transform: scale(1.1); /* Aumenta el tamaño del texto en un 10% al pasar el ratón */
+    transition: transform 0.3s ease; /* Agrega una transición suave para suavizar el cambio de tamaño */
+}
+
+
+
+/* Estilos para el botón "Area 51" */
+#color-change-button {
+    background-color: #000;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.15em;
+    display: inline-block;
+    padding: 15px 20px;
+    margin-top: 20px;
+    border: none;
+    cursor: pointer;
+    font-family: 'TuTipoDeLetra', Arial, sans-serif; /* Establece el tipo de letra deseado */
+    font-size: x-large;
+    position: relative; /* Agrega posición relativa para elementos secundarios */
+}
+
+
+
+/* Línea que aparecerá debajo del botón "Area 51" */
+#color-change-button::after {
+    content: '';
+    position: absolute;
+    left: 50%; /* Coloca la línea en el centro horizontal del botón */
+    bottom: -2px; /* Distancia de la línea con respecto al botón */
+    width: 0; /* Inicialmente, la línea no tiene ancho */
+    height: 2px; /* Grosor de la línea */
+    background-color: white; /* Color de la línea */
+    transform: translateX(-50%); /* Centra horizontalmente la línea */
+    transition: width 0.3s ease;
+}
+
+#color-change-button:hover::after {
+    width: 100%; /* Al pasar el ratón, la línea se extiende hacia los lados */
+}
+
+/* Estilos iniciales para el botón "Area 51" (clase "default") */
+#color-change-button.default {
+    background-color: #000;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.15em;
+    display: inline-block;
+    padding: 15px 20px;
+    margin-top: 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Agrega transiciones para cambiar el color de fondo y texto */
+}
+
+/* Estilos cuando el botón está activo (clase "active") */
+#color-change-button.active {
+    background-color: green; /* Cambia el color de fondo cuando está activo */
+    color: #000; /* Cambia el color del texto cuando está activo */
+}
+
+
+/* css.css */
+
+.default {
+    background-color: #yourOriginalColor;  // Pon el color original del botón
+    /* ... (otros estilos que quieras) ... */
+}
+
+
+
+@media screen and (max-height: 300px) {
+    nav ul {
+        margin-top: 40px;
+    }
+}
+
+nav{
+
+display: flex;
+    
+}
+
+
+#additional-button {
+    background-color: #000;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.15em;
+    padding: 15px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#additional-button:hover {
+    background-color: #333;  /* Cambia el color de fondo al pasar el ratón por encima */
+    color: #fff;
+}
+
+.cross-button {
+    background-color: transparent; /* Transparente para que solo veamos la "X" */
+    color: #fff; /* Color blanco para la "X" */
+    font: bold 24px/1.4 'Open Sans', Arial, sans-serif; /* Usa la misma fuente que el resto del contenido */
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.15em;
+    padding: 15px 20px;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.3s ease; /* Efecto de transición para el hover */
+}
+
+.cross-button:hover {
+    opacity: 0.7; /* Al pasar el ratón, la "X" se vuelve un poco transparente */
+    outline: none;
+}
+.menu-button {
+    background: none;
+    border: none;
+    color: #fff; 
+    font-size: 24px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    position: relative;
+    transition: transform 0.3s ease;
+    outline: none;
+}
+
+.menu-button:hover, .menu-button:focus {
+    outline: none;
+    background-color: transparent;
+    border: none;
+    transform: scale(1.1);
+}
+
+.menu-button::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: width 0.3s;
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50%);
+}
+
+.menu-button:hover::after {
+    width: 100%;
+}
+
+
+
+JAVASCRIPPPPPPPPPPPPTTTTTTTTTTT------------------
+document.addEventListener("DOMContentLoaded", function() {
+    const aboutLink = document.getElementById('about-link');
+    const aboutContent = document.getElementById('about-content');
+    const contactLink = document.getElementById('contact-link');
+    const contactContent = document.getElementById('contact-content');
+    const colorChangeButton = document.getElementById('color-change-button');
+    const textElements = document.querySelectorAll('#title, #about-content p, #contact-content p, #about-link, #contact-link');
+    const area51Image = document.getElementById('area51Image');
+
+    let isGreen = false;
+
+    function toggleContent(content) {
+        if (content.style.display === 'none' || content.style.display === '') {
+            content.style.display = 'block';
+        } else {
+            content.style.display = 'none';
+        }
+    }
+
+    aboutLink.addEventListener('click', function(event) {
+        event.preventDefault();
+        toggleContent(aboutContent);
+    });
+
+    contactLink.addEventListener('click', function(event) {
+        event.preventDefault();
+        toggleContent(contactContent);
+    });
+
+    colorChangeButton.addEventListener('click', function() {
+        if (!isGreen) {
+            textElements.forEach(element => element.style.color = 'green');
+            colorChangeButton.querySelector('span').style.color = 'green';
+            isGreen = true;
+        } else {
+            textElements.forEach(element => element.style.color = '');
+            colorChangeButton.querySelector('span').style.color = '';
+            isGreen = false;
+        }
+
+        if (area51Image.getAttribute('src') === "alien.jpg") {
+            area51Image.setAttribute('src', "alienverde-removebg-preview.png");
+        } else {
+            area51Image.setAttribute('src', "alien.jpg");
+        }
+    });
+});
+
+
+document.getElementById('additional-button').addEventListener('click', function() {
+    let audioPlayer = document.getElementById('audio-player');
+    if (audioPlayer.paused) {
+        audioPlayer.play();
+    } else {
+        audioPlayer.pause();
+    }
+});
+
+
+HTML------------------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css">
+    <title>Tu Sitio Web</title>
+</head>
+<body>
+    <header>
+        <div id="title"> <!-- Mueve el div "title" dentro del header -->
+            <h1>FULL STACK DEVELOPER</h1>
+            <img id="area51Image" src="alien.jpg" width="300px" height="200px" alt="Area 51">
+
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" id="about-link">BIOGRAFÍA.</a></li>
+                <li><a href="#" id="contact-link">Contacto</a></li>
+                <li><button id="color-change-button" class="default">
+                    <span>Area 51</span>
+                </button>
+                </li>
+                <br>
+                <button class="menu-button" id="additional-button">X</button>
+
+
+
+            </ul>
+        </nav>
+    </header>
+    
+    <div id="about-content" style="display: none;">
+        <p>Me llamo Manuel, tengo 27 años y nací en Venezuela pero llevo viviendo en Madrid 17 años.</p>
+        <p>Me he dedicado al mundo del deporte desde hace unos 3 años, pero debido a una lesión me he cambiado de sector.</p>
+        <p>Viví 2 años en Inglaterra y mis aficiones son el deporte y los videojuegos.</p>
+        <p>Espero poder conocernos mejor y que os guste mi Portfolio.</p>
+    </div>
+    
+    <div id="contact-content" style="display: none;">
+        <p><a href="https://www.linkedin.com/in/manuel-sanchez-koppe-939906228/" target="_blank">LinkedIn</a></p>
+        <p><a href="https://twitter.com/elonmusk" target="_blank">Twitter</a></p>
+    </div>
+    
+    <footer>
+        <!-- Pie de página -->
+    </footer>
+    <audio id="audio-player" src="ALIEN.mp3" preload="auto"></audio>
+
+    <script src="javascript.js"></script>
+</body>
+</html>
+
